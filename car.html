@@ -10,7 +10,7 @@
 
 <h2>Orders a car Vinay Manavarthi</h2>
   
-    <form>
+    <form id ="checkbox_form">
         <div class="form-check">
             <input type="checkbox" id="electricCar" name="carDetails" value="electric">
             <label for="cb1_cheese">electric</label>
@@ -29,14 +29,14 @@
         <input type="button"  onclick="orderCar()" value="Order a car">
     </form>
     <br>
-    <form>
+    <form >
         <div class="form-group" >
             <label for="form_property" >Enter a property</label>
-            <input type="text" id="property" name="form_property" value="color">
+            <input type="text" id="property" name="property" value="color">
         </div>
         <div class="form-group">
             <label for="form_value">Enter a value</label>
-            <input type="text"  id="value" name="form_value" autofocus>
+            <input type="text"  id="value" name="value">
         </div>
 
         <input type="button"  onclick="updateCar()" value="Update the car">
@@ -74,14 +74,9 @@ my_car = ""
             }
             document.getElementById("carType").innerHTML = my_car
         }
-
         function updateCar() {
-
             property = document.getElementById("property").value
             value = document.getElementById("value").value
-            //my_car = my_car + ", Property: " + property + ", value: " + value
-            //out = document.getElementById("left")
-            //out.innerHTML = my_car
             document.getElementById("carType").innerHTML = my_car + ", Property: " + property + ", value: " + value
         }
     </script>
