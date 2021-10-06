@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+ <head>
+<title>
+    Arithmetic Operations
+</title>
+
+ </head>
+<body>
+
+<h2>Computes Vinay Manavarthi</h2>
+<form>
+    <div class="form-group" style="width: 30%;">
+        <label for="form1_base" class="from-lable">Enter a base</label>
+        <input type="number" class="form-control" id="baseId" name="form1_base" value=10>
+    </div>
+    <div class="form-group" style="width: 30%;">
+        <label for="form1_exponent" class="from-lable">Enter an exponent </label>
+        <input type="text" class="form-control" id="exponentId" name="form1_exponent" value=2>
+    </div>
+    <input type="button" onclick="powers()" value="Compute">
+</form>
+
+
+<p id="result">This text will be replaced </p>
+
+<script> 
+ 
+ function powers() {
+            console.log("Getting form values")
+            baseVal = document.getElementById("baseId").value
+            exponentVal = document.getElementById("exponentId").value
+            string = ""
+            for (i = 1; i <= exponentVal; i++) {
+                total = Math.pow(baseVal, i);
+
+                string += total + " ";
+            }
+            document.getElementById("result").innerHTML = "Powers of " + baseVal + " are: " + string
+        }
+</script>
+
+</body>
+</html> 
